@@ -1,8 +1,14 @@
+// Import React & Redux Dependencies
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
 
+// Import Individual Reducers
+import mapReducer from '../features/map/mapSlice';
+import weatherReducer from '../features/weatherInfo/weatherSlice';
+
+// Create Store
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
-  },
+    map: mapReducer,
+    weather: weatherReducer
+  }
 });
